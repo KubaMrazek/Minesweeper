@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+canvas {
+  display: block;
+}
+
+
+h1{
+  text-align: center;
+  margin: 20px;
+  font-family: 'Bungee Shade', cursive;
+font-size: 45px;
+background-color: grey;
+border: solid 5px black;
+border-radius: 20px;
+
+}
+
+h2{
+  font-family: 'Bungee Shade', cursive;
+font-size: 25px;
+background-color: grey;
+border: solid 5px black;
+border-radius: 20px;
+padding: 20px;
+}
+img{
+  width:20;
+}
