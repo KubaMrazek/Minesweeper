@@ -1,3 +1,5 @@
+//tady jsou uschované všechny proměnné
+
 function Cell(i, j, w) {
   this.i = i;
   this.j = j;
@@ -9,7 +11,7 @@ function Cell(i, j, w) {
   this.mine = false;
   this.revealed = false;
 }
-
+//Tady v té funkci je to co se bude ukazovat při jaké akci(pokud kliknu někam kde není mina políčko se jen zabarví a pokud je mina tak se ukáže)
 Cell.prototype.show = function () {
   stroke(0);
   noFill();
@@ -31,11 +33,11 @@ Cell.prototype.show = function () {
     }
   }
 }
-
+//zajišťuje abych mohl kliknout na políčko a aby se to ukázalo jedině pokud opravdu do políčka kliknu
 Cell.prototype.contains = function (x, y) {
   return (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w);
 }
-
+//funkce pro odhalování políček
 Cell.prototype.reveal = function () {
   this.revealed = true;
   if (this.susedCount == 0) {
@@ -44,7 +46,7 @@ Cell.prototype.reveal = function () {
 
   }
 }
-
+// když kliknu na políčko kolem kterého není žádná mina tak odhalí všechny sousedící políčka které nejsou mina
 Cell.prototype.floodFill = function () {
   for (var xoff = -1; xoff <= 1; xoff++) {
     var i = this.i + xoff;
@@ -61,6 +63,7 @@ Cell.prototype.floodFill = function () {
     }
   }
 }
+//tahle funkce počítá miny v okolí políčka (pokud klidnu na políčko ukáže se 3 tzn. že jsou v okolí tři miny)
 Cell.prototype.countMines = function () {
   if (this.mine) {
     this.susedCount = -1;
