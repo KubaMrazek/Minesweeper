@@ -61,9 +61,6 @@ function gameOver(){
   for (var i = 0; i < cols; i++){
     for (var j = 0; j < rows; j++){
       grid[i][j].revealed = true;
-      textSize(50);
-      fill(255,0,0);
-      text("Game over try again :)",width/2,height/2);
     }
   }
 }
