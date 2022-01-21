@@ -11,7 +11,7 @@ var grid;
 var cols;
 var rows;
 var w = 50;
-var totalMines = 40;
+var totalMines = 20;
 var canvas;
 var h2;
 var h3;
